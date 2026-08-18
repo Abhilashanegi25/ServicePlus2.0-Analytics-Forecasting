@@ -1,0 +1,41 @@
+# Environment / secrets
+.env
+*.env
+etl/.env
+etl/.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local databases / experiment tracking
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+
+# Large/raw/private datasets
+data_stats*.csv
+*.dmp
+
+# Local configuration
+*.local
+
+# Keep the example configuration
+!etl/.env.example

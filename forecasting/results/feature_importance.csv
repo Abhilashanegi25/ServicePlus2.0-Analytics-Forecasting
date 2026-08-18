@@ -1,0 +1,10 @@
+feature,importance
+rolling_mean_3,0.29649037
+state_encoded,0.2902201
+lag_6,0.116142616
+year,0.098240316
+month,0.08688136
+rolling_mean_6,0.051630326
+lag_1,0.048156384
+lag_3,0.012238438
+quarter,0.0
