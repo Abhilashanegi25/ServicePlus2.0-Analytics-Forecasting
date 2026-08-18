@@ -1,38 +1,115 @@
 # Data Warehouse Schema
 
-The analytical data warehouse follows a fact-and-dimension structure designed to support application, service, department, location, status, and workflow analysis.
+This directory documents the analytical schema used for the ServicePlus project.
 
-## Fact Tables
+## Modelling Approach
 
-### fact_application
+The project follows a fact-and-dimension modelling approach for analytical workloads.
 
-Application-level records containing application identifiers, service information, submission dates, due dates, state information, and completion information.
+The model separates:
 
-### fact_task_history
+- Application-level transactional facts
+- Workflow/task-level facts
+- Descriptive service information
+- Department information
+- Location information
+- Application status
+- Applicant-related information
 
-Task-level workflow records containing task details, execution timestamps, actions, user/designation information, and processing-time measures.
+## Core Fact Tables
 
-### fact_workflow
+### Fact Application
 
-Workflow-level analytical records used for workflow and process analysis.
+Grain: one record per application.
+
+Key fields include:
+
+- `application_id`
+- `applicant_key`
+- `service_key`
+- `appl_ref_no`
+- `submission_date`
+- `due_date`
+- `state`
+
+This table supports application-level metrics, trend analysis and service-level analysis.
+
+### Fact Task History
+
+Grain: one record per application task/history record.
+
+Key fields include:
+
+- `task_history_key`
+- `application_id`
+- `appl_status`
+- `task_name`
+- `task_type`
+- `designation`
+- `location_name`
+- `user_name`
+- `task_action`
+- `task_action_detail`
+- `received_time`
+- `executed_time`
+- `current_process_id`
+- `processing_time_hours`
+
+This table supports workflow and operational processing analysis.
 
 ## Dimension Tables
 
-### dim_applicant
-Applicant-related reference information.
+### Dim Service
 
-### dim_department
-Department and department-related service information.
+Contains service-level descriptive attributes:
 
-### dim_location
-Location reference information.
+- `service_key`
+- `service_id`
+- `base_service_id`
+- `service_name`
+- `department_id`
+- `department_name`
+- `state`
 
-### dim_service
-Service and service-category information.
+### Dim Department
 
-### dim_status
-Application/status reference information.
+Contains department-level information used for departmental analysis.
 
-## Purpose
+### Dim Location
 
-The warehouse structure separates measurable transactional/workflow information from descriptive attributes, making the data easier to query and use for analytical dashboards and reporting.
+Contains submission-location information.
+
+### Dim Status
+
+Contains application-status values.
+
+### Dim Applicant
+
+Contains selected applicant-related attributes used within the analytical model.
+
+## Relationships
+
+Conceptually, the model follows:
+
+```text
+Dim Applicant
+      │
+      │ applicant_key
+      ▼
+Fact Application
+      │
+      │ service_key
+      ▼
+Dim Service
+      │
+      └── department information
+
+Fact Application
+      │
+      │ application_id
+      ▼
+Fact Task History
+      │
+      ├── task information
+      ├── location information
+      └── processing-time metrics
