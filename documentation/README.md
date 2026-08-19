@@ -1,4 +1,4 @@
-k# Project Documentation
+# Project Documentation
 
 This directory contains the major project documentation artifacts:
 
