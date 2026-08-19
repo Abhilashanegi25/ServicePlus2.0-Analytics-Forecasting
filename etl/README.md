@@ -94,3 +94,7 @@ Replace the placeholder values in your local environment only.
 The original ServicePlus source database and raw operational data are not included in this repository.
 
 The ETL scripts are provided to demonstrate the transformation and data-engineering workflow without exposing restricted source data.
+
+## Repository Role
+
+The ETL layer forms the data-engineering stage of the project, connecting the source data with the structured analytical datasets used by downstream analysis and dashboarding.
