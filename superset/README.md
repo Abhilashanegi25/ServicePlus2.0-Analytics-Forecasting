@@ -2,7 +2,7 @@
 
 The ServicePlus Analytics Dashboard was developed in Apache Superset as the interactive visualization and business-intelligence layer of the project.
 
-The dashboard brings together application, applicant, workflow, service-performance and forecasting analysis into a single interactive interface.
+The dashboard brings together application, workflow, service-performance and forecasting analysis into a single interactive interface.
 
 ## Dashboard Structure
 
@@ -14,7 +14,7 @@ The dashboard is organized into five main tabs:
 4. Service Performance
 5. Forecasting & Trends
 
-Global filters are available across the dashboard for:
+Global filters are available for:
 
 - State
 - Service
@@ -26,11 +26,9 @@ These filters allow the analysis to be narrowed to specific geographic, service-
 
 ## 1. Overview
 
-The Overview tab provides the high-level view of ServicePlus activity.
+The Overview tab provides a high-level view of ServicePlus activity.
 
-It is designed as the starting point of the dashboard and presents the key operational indicators required to understand the overall application ecosystem.
-
-The tab provides a consolidated view before moving into the detailed analytical sections.
+It serves as the starting point of the dashboard and provides a consolidated view of overall application activity before moving into the detailed analytical sections.
 
 ---
 
@@ -47,23 +45,17 @@ The dashboard includes:
 - Applications Processed
 - Applications in Progress
 
-### Application Status Distribution
+### Application Analysis
 
-A status-distribution visualization shows the composition of applications across available application statuses.
+The tab includes analysis of:
 
-### Top States by Applications
-
-A state-level comparison identifies states with the highest application volumes.
-
-### Most Requested Services
-
-A service-demand visualization highlights the services receiving the highest application activity.
+- Application status distribution
+- Application volume by state
+- Most requested services
 
 ### Applicant Analytics
 
-The Applications section also includes applicant-level analysis.
-
-The dashboard provides:
+The Applications section also provides applicant-level analysis, including:
 
 - Total Applicants
 - Districts Covered
@@ -73,15 +65,13 @@ The dashboard provides:
 - Applicant Age Group Distribution
 - Average Applicant Age by State
 
-This allows application demand to be viewed alongside the geographic and demographic characteristics available in the analytical dataset.
-
 ---
 
 ## 3. Task Processing
 
 The Task Processing tab focuses on workflow execution and operational processing activity.
 
-It is used to analyse:
+The analysis covers:
 
 - Task execution volume
 - Completed and rejected tasks
@@ -89,7 +79,7 @@ It is used to analyse:
 - User/processor activity
 - Verification-office workload
 
-The analysis provides an operational view of how applications move through workflow tasks and where processing activity is concentrated.
+This provides an operational view of application workflow activity and processing concentration.
 
 ---
 
@@ -97,9 +87,7 @@ The analysis provides an operational view of how applications move through workf
 
 The Service Performance tab focuses on service-level operational performance.
 
-The analysis includes service processing behaviour and SLA-related performance indicators.
-
-It is intended to help identify:
+The analysis includes:
 
 - Service processing performance
 - Processing-time patterns
@@ -107,15 +95,15 @@ It is intended to help identify:
 - SLA breaches
 - Offices requiring attention
 
-This section connects application/service analysis with operational performance.
+This section connects service-level demand with operational performance.
 
 ---
 
 ## 5. Forecasting & Trends
 
-The Forecasting & Trends tab connects historical application activity with the forecasting component of the project.
+The Forecasting & Trends tab connects historical application activity with the forecasting work carried out in the project.
 
-It is used to present:
+It presents:
 
 - Historical application trends
 - Forecasted demand
@@ -124,13 +112,13 @@ It is used to present:
 - Forecast uncertainty
 - State-level forecasts
 
-The underlying forecasting work includes model comparison, feature importance and confidence-interval analysis.
+The underlying forecasting work includes ARIMA, SARIMA experimentation, XGBoost, LightGBM, feature-importance analysis and forecast confidence intervals.
 
 ---
 
 ## Dashboard Data Flow
 
-The dashboard follows the analytical pipeline:
+The dashboard follows the analytical workflow:
 
 ServicePlus Data
         ↓
@@ -138,15 +126,13 @@ PostgreSQL
         ↓
 ETL & Transformation
         ↓
-Fact & Dimension Tables
-        ↓
-Analytical Datasets
+Analytical Tables / Datasets
         ↓
 Apache Superset
         ↓
 Interactive Dashboard
 
-Forecasting outputs are generated separately from historical analytical data and are incorporated into the forecasting and trend analysis layer.
+Forecasting outputs are generated from historical application data and are incorporated into the forecasting and trend analysis.
 
 ---
 
@@ -158,35 +144,29 @@ The dashboard layer uses:
 - PostgreSQL
 - SQL
 - Python-generated analytical datasets
-- Fact and dimension tables
 - Forecasting outputs
 
 ---
 
-## Repository Contents
+## Screenshots
 
-### `dashboards/`
+Screenshots of the completed dashboard are available in:
 
-Reserved for sanitized dashboard exports, configuration files or dashboard documentation.
+`screenshots/`
 
-### `screenshots/`
+The screenshot set covers the dashboard views represented in the repository.
 
-Reserved for sanitized screenshots of the completed dashboard.
-
-Screenshots should only be added after verifying that they do not expose restricted or personally identifiable information.
+Before publication, screenshots should be reviewed to ensure that restricted or personally identifiable information is not exposed.
 
 ---
 
 ## Data Privacy
 
-The dashboard was developed using internship data and a local analytical environment.
-
 The public repository does not contain:
 
 - Database credentials
 - Passwords
-- Connection strings
 - Raw database dumps
-- Restricted source records
+- Restricted source datasets
 
-Any dashboard screenshot or exported configuration added to this repository must be reviewed for sensitive information before publication.
+The repository contains selected analytical outputs, forecasting results, dashboard screenshots, code and documentation prepared for project documentation purposes.

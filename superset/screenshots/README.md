@@ -1,6 +1,6 @@
 # Dashboard Screenshots
 
-This directory contains visual references for the ServicePlus 2.0 Analytics Dashboard developed using Apache Superset.
+This directory contains screenshots of the ServicePlus 2.0 Analytics Dashboard developed in Apache Superset.
 
 The dashboard is organized into five main analytical tabs:
 
@@ -10,59 +10,65 @@ The dashboard is organized into five main analytical tabs:
 4. Service Performance
 5. Forecasting & Trends
 
-## Dashboard Views
+## Screenshot Index
 
-### 1. Overview
-
-The Overview tab provides a high-level summary of ServicePlus activity through key application, service, department, location, and workflow indicators.
+### Overview
 
 Screenshots:
+
 - `dashboard_page_1.png`
 - `dashboard_page_2.png`
 
-### 2. Applications
+These screenshots represent the high-level dashboard views.
 
-The Applications tab focuses on application-level analysis, including application volumes, status distribution, service and state-level patterns, and applicant-related analytical views.
+### Applications
 
 Screenshots:
+
 - `dashboard_applications_page_1.png`
 - `dashboard_applications_page_2.png`
 
-### 3. Task Processing
+These screenshots represent the application-focused views, including application activity, status, service/state patterns and applicant-related analysis.
 
-The Task Processing tab focuses on workflow execution and operational processing, including task activity, processing times, workflow actions, and task-level performance.
+### Task Processing
 
 Screenshots:
+
 - `dashboard_page_3.png`
 - `dashboard_page_4.png`
 
-### 4. Service Performance
+These screenshots represent workflow and task-processing analysis.
 
-The Service Performance tab provides service-level analysis, including service demand, processing behaviour, performance indicators, and SLA-related analysis.
+### Service Performance
 
 Screenshots:
+
 - `dashboard_page_5.png`
 - `dashboard_page_6.png`
 
-### 5. Forecasting & Trends
+These screenshots represent service-level performance and SLA-related analysis.
 
-The Forecasting & Trends tab connects historical trends with forecasting outputs and provides forward-looking analytical insights.
+### Forecasting & Trends
 
 Screenshots:
+
 - `dashboard_page_7.png`
 - `dashboard_page_8.png`
 
-## Screenshot Notes
+These screenshots represent historical trends and forecasting-related analysis.
 
-The screenshots are provided as visual references for the dashboard structure and analytical views.
+## Screenshot Policy
 
-Sensitive or private information should not be included in publicly shared screenshots, including:
+The screenshots are included as visual references for the dashboard structure and analytical views.
+
+The public repository does not include the original restricted production dataset or database credentials.
+
+Screenshots should not expose:
 
 - Applicant names
 - Addresses
 - Dates of birth
-- Credentials or passwords
-- Database connection details
-- Other personally identifiable information
-
-The repository contains sanitized analytical outputs and documentation rather than the original restricted production dataset.
+- Passwords
+- Database credentials
+- Connection strings
+- Other personally identifiable or restricted information

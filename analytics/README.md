@@ -1,63 +1,77 @@
-# Analytics & Reporting
+# Analytics
 
-This directory contains selected analytical outputs generated from the transformed ServicePlus application and workflow datasets.
+This directory contains analytical datasets generated from ServicePlus application and workflow data.
 
-The analytical layer was used to examine application trends, service distribution, departmental activity, status patterns, location-level activity and workflow actions.
-
-## Analytical Outputs
-
-### Monthly Application Trend
-
-`report_monthly_trend_202606111240.csv`
-
-Contains monthly application trend information used to study changes in application volume over time.
-
-### Service Distribution
-
-`report_service_distribution_clean_202606111240.csv`
-
-Contains application distribution across services and supports service-level analysis.
+## Reports
 
 ### Department Distribution
 
-`report_department_distribution_clean_202606111240.csv`
+`department_distribution.csv`
 
-Contains application distribution across departments and supports departmental comparison.
+Contains application counts by standardized department.
 
-### Status Distribution
+Columns:
 
-`report_status_distribution_202606111241.csv`
-
-Contains application distribution by application status.
+- `department_standardized`
+- `applications`
 
 ### Location Distribution
 
-`report_location_distribution_202606111403.csv`
+`location_distribution.csv`
 
-Contains activity distribution across available submission locations.
+Contains application counts by submission location.
+
+Columns:
+
+- `submission_location`
+- `applications`
+
+### Monthly Trend
+
+`monthly_trend.csv`
+
+Contains monthly application volumes.
+
+Columns:
+
+- `month`
+- `applications`
+
+### Service Distribution
+
+`service_distribution.csv`
+
+Contains service-level application/service counts after service-name standardization.
+
+Columns:
+
+- `service_standardized`
+- `service_count`
+
+### Status Distribution
+
+`status_distribution.csv`
+
+Contains application counts by application status.
+
+Columns:
+
+- `appl_status`
+- `applications`
 
 ### Workflow Actions
 
-`report_workflow_actions_202606111241.csv`
+`workflow_actions.csv`
 
-Contains workflow-action-level information used to examine operational processing patterns.
+Contains occurrences of workflow actions.
 
-## Analytical Use Cases
+Columns:
 
-The generated datasets support analysis of:
+- `action_detail`
+- `occurrences`
 
-- Application volume and trends
-- Service demand
-- Department-level activity
-- Application status distribution
-- Location-level activity
-- Workflow actions
-- Operational processing patterns
+## Purpose
 
-These analytical outputs were also used as inputs for dashboard development in Apache Superset.
+These datasets provide the analytical layer used for trend analysis, distribution analysis, workflow analysis, and dashboard visualizations.
 
-## Data Privacy
-
-The original ServicePlus source data is not included in this public repository.
-
-Only selected analytical outputs are provided. Raw source records, database dumps and potentially sensitive operational information have been excluded.
+The files in this directory are derived analytical outputs rather than the original ServicePlus source data.
