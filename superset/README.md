@@ -186,3 +186,8 @@ The public repository does not contain:
 - Restricted source datasets
 
 The repository contains selected analytical outputs, forecasting results, dashboard screenshots, code and documentation prepared for project documentation purposes.
+
+## Repository Role
+
+The Superset layer provides the interactive business-intelligence interface through which the analytical datasets and forecasting outputs are presented for exploration and interpretation.
+
