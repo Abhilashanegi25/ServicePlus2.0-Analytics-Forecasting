@@ -8,6 +8,80 @@ The project analyses ServicePlus application and workflow data to understand app
 
 
 ---
+---
+
+## What is ServicePlus 2.0?
+
+**ServicePlus** is a metadata-based e-Service delivery framework developed by the **National Informatics Centre (NIC)** for delivering government services electronically to citizens, businesses and other stakeholders. It is built around a configurable, low-code/no-code approach that enables government departments to define, configure and manage services and their associated workflows through a unified platform.  [oai_citation:2‡National Informatics Centre](https://www.nic.gov.in/project/serviceplus/?utm_source=chatgpt.com)
+
+ServicePlus supports the complete lifecycle of an e-Service, including application submission, workflow-based processing, service delivery and related reporting and analytics. The platform is used across government departments and States/UTs for a wide range of services.  [oai_citation:3‡National Informatics Centre](https://www.nic.gov.in/blog/serviceplus-a-versatile-and-secure-solution-for-service-delivery/?utm_source=chatgpt.com)
+
+### ServicePlus Application Data Used in This Project
+
+The project focused on the **application and workflow data generated through ServicePlus**.
+
+At the application level, the data represents submitted service applications and contains attributes such as application identifiers, service information, department information, submission details, dates, locations and application status.
+
+At the workflow level, the data represents the processing activity associated with those applications. A single application may have multiple workflow/task records containing information such as task details, timestamps, actions and processing information.
+
+These two levels of data formed the foundation of the project:
+
+```text
+ServicePlus
+     │
+     ├── Application Data
+     │      ├── Applications
+     │      ├── Services
+     │      ├── Departments
+     │      ├── Submission Details
+     │      ├── Locations
+     │      └── Application Status
+     │
+     └── Workflow Data
+            ├── Tasks
+            ├── Actions
+            ├── Received / Executed Times
+            ├── Processing Information
+            └── Workflow Activity
+
+                    │
+                    ▼
+              Data Profiling
+                    │
+                    ▼
+                 ETL & SQL
+                    │
+          ┌─────────┴─────────┐
+          ▼                   ▼
+      Analytics           Forecasting
+          │                   │
+          └─────────┬─────────┘
+                    ▼
+              Superset Dashboard
+
+
+The factual description here is aligned with NIC's own description of ServicePlus as a configurable/metadata-based e-service framework and its workflow/service-delivery capabilities.  [oai_citation:4‡National Informatics Centre](https://www.nic.gov.in/project/serviceplus/?utm_source=chatgpt.com)
+
+**One thing:** because this is your internship repository, I would call it **ServicePlus 2.0** in the project context, but I wouldn't make unsupported claims about what specifically changed between ServicePlus versions unless your internship documentation explicitly establishes that.
+
+---
+
+# 3. Improve the temporal-coverage section
+
+Your current main README already mentions temporal coverage during profiling, but the actual limitation deserves to be stated more explicitly.  [oai_citation:5‡GitHub](https://github.com/Abhilashanegi25/ServicePlus2.0-Analytics-Forecasting)
+
+I would replace the current **Data Availability Constraints** subsection with:
+
+```markdown
+## Data Availability and Temporal Coverage
+
+The analysis was performed using the ServicePlus data made available during the internship. For the dashboard and application-level analysis, the available dataset covered approximately **one month of application activity**.
+
+This limited temporal coverage constrained the extent of long-term trend and seasonal analysis that could be performed. In particular, the available period was not sufficient to establish reliable year-over-year patterns, recurring seasonal behaviour or extensive historical comparisons.
+
+The analysis therefore focuses primarily on application distributions, service and department activity, workflow processing, operational patterns and the trends that could be meaningfully derived from the available period.
+
+The forecasting component was developed as an analytical modelling exercise using the available historical data and should be interpreted within the scope of that data rather than as a long-term production forecasting system.
 
 ## Project Overview
 
