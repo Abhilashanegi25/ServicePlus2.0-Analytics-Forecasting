@@ -4,6 +4,9 @@ An end-to-end data analytics, ETL, dashboarding and forecasting project develope
 
 The project analyses ServicePlus application and workflow data to understand application volumes, service demand, department and location distributions, application status, workflow processing, service performance and future application trends.
 
+> **Data Privacy Notice:** The ServicePlus data used in this project was provided in the context of an internship at the **National Informatics Centre (NIC), Ministry of Electronics and Information Technology (MeitY), Government of India**. The underlying data is sensitive government data and cannot be publicly disclosed. Accordingly, raw datasets, restricted records, personally identifiable information, database credentials and other sensitive implementation details have been intentionally kept private. The repository contains only selected code, derived outputs, documentation and dashboard representations that can be safely shared.
+
+
 ---
 
 ## Project Overview
@@ -357,6 +360,37 @@ The forecasting work includes:
 The notebooks are available under [`forecasting/notebooks/`](./forecasting/notebooks/).
 
 Generated outputs are available under [`forecasting/results/`](./forecasting/results/).
+
+---
+
+
+# Data Privacy & Project Constraints
+
+## Data Privacy
+
+The ServicePlus data used during this project was provided in the context of an internship at the **National Informatics Centre (NIC), Ministry of Electronics and Information Technology (MeitY), Government of India**.
+
+The source data contains sensitive government application and workflow information and therefore cannot be publicly disclosed. The original database, raw operational records, database dumps, credentials and personally identifiable or otherwise restricted information have not been included in this repository.
+
+As a result, the public repository contains only selected code, derived analytical outputs, forecasting results, documentation and dashboard representations that can be shared without exposing the underlying restricted data.
+
+Some implementation details, datasets, values and dashboard elements have therefore been intentionally omitted, masked or kept private.
+
+## Data Availability Constraints
+
+The analysis was performed on the ServicePlus data made available during the internship. The dataset provided for the dashboard analysis covered approximately **one month of application data**.
+
+Because of the limited temporal coverage, the available data was not sufficient to perform extensive long-term trend analysis, seasonal analysis or highly granular historical comparisons. The analytical outputs and forecasting work should therefore be interpreted within the scope of the data that was available during the internship.
+
+## Dashboard Development Constraints
+
+The dashboard was developed using **Apache Superset**, in accordance with the tools and requirements specified for the project.
+
+Due to the combination of limited data availability and the requirement to work within the specified Superset environment, the dashboard could not incorporate every possible KPI, interaction or advanced analytical feature. Certain richer dashboard analyses, deeper drill-downs and additional KPI integrations were not feasible with the available data and project constraints.
+
+The dashboard therefore focuses on the analyses and visualizations that could be reliably developed from the available data while following the prescribed technical requirements.
+
+These constraints reflect the scope and data-access limitations of the internship project rather than limitations of the underlying ServicePlus platform.
 
 ---
 
