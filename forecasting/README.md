@@ -31,13 +31,13 @@ Contains additional forecasting analysis and forecast-generation work.
 
 ## Forecasting Models
 
-The project includes modelling work involving:
+The forecasting work includes:
 
 - ARIMA
-- SARIMA
+- XGBoost
 - LightGBM
 
-The models were evaluated and compared as part of the forecasting workflow.
+ARIMA and XGBoost are included in the model-comparison results, while LightGBM is represented through its dedicated feature-importance output.
 
 ## Forecasting Outputs
 

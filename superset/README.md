@@ -112,7 +112,7 @@ It presents:
 - Forecast uncertainty
 - State-level forecasts
 
-The underlying forecasting work includes ARIMA, SARIMA experimentation, XGBoost, LightGBM, feature-importance analysis and forecast confidence intervals.
+The underlying forecasting work includes ARIMA, XGBoost, LightGBM, feature-importance analysis and forecast confidence intervals.
 
 ---
 
@@ -159,6 +159,22 @@ The screenshot set covers the dashboard views represented in the repository.
 Before publication, screenshots should be reviewed to ensure that restricted or personally identifiable information is not exposed.
 
 ---
+
+## Dashboard Documentation
+
+The complete dashboard is provided as a PDF in the repository:
+
+[`documentation/Dashboard.pdf`](../documentation/Dashboard.pdf)
+
+The PDF contains the final dashboard views covering the Overview, Applications, Task Processing, Service Performance, and Forecasting & Trends sections.
+
+Additional dashboard screenshots are available in:
+
+`screenshots/`
+
+The screenshots provide individual visual references for selected dashboard views.
+
+Before publication, dashboard visuals should be reviewed to ensure that restricted or personally identifiable information is not exposed.---
 
 ## Data Privacy
 
