@@ -12,9 +12,9 @@ The project analyses ServicePlus application and workflow data to understand app
 
 ## What is ServicePlus 2.0?
 
-**ServicePlus** is a metadata-based e-Service delivery framework developed by the **National Informatics Centre (NIC)** for delivering government services electronically to citizens, businesses and other stakeholders. It is built around a configurable, low-code/no-code approach that enables government departments to define, configure and manage services and their associated workflows through a unified platform.
+**ServicePlus** is a metadata-based e-Service delivery framework developed by the **[National Informatics Centre (NIC)](https://www.nic.gov.in/project/serviceplus/)** for delivering government services electronically to citizens, businesses and other stakeholders. It is built around a configurable, low-code/no-code approach that enables government departments to define, configure and manage services and their associated workflows through a unified platform.
 
-ServicePlus supports the complete lifecycle of an e-Service, including application submission, workflow-based processing, service delivery and related reporting and analytics. The platform is used across government departments and States/UTs for a wide range of services.
+ServicePlus supports the complete lifecycle of an e-Service, including application submission, workflow-based processing, service delivery and related reporting and analytics. The platform is used across government departments and States/UTs for a wide range of services. See the [National Informatics Centre](https://www.nic.gov.in/blog/serviceplus-a-versatile-and-secure-solution-for-service-delivery/) for more information.
 
 ### ServicePlus Application Data Used in This Project
 
